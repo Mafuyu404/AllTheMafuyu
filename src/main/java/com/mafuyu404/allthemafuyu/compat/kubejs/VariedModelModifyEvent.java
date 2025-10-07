@@ -1,7 +1,6 @@
-package com.mafuyu404.allthemafuyu.event;
+package com.mafuyu404.allthemafuyu.compat.kubejs;
 
 import com.mafuyu404.allthemafuyu.Allthemafuyu;
-import com.mafuyu404.allthemafuyu.compat.kubejs.MafuyuEvents;
 import com.mafuyu404.allthemafuyu.init.VariedModelEvent;
 import dev.latvian.mods.kubejs.client.ClientInitEventJS;
 import net.minecraft.world.item.ItemStack;

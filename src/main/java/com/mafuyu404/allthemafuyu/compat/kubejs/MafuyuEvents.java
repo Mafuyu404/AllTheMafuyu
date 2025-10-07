@@ -1,6 +1,5 @@
 package com.mafuyu404.allthemafuyu.compat.kubejs;
 
-import com.mafuyu404.allthemafuyu.event.VariedModelModifyEvent;
 import dev.latvian.mods.kubejs.event.EventGroup;
 import dev.latvian.mods.kubejs.event.EventHandler;
 
