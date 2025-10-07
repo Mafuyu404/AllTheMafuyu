@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.mafuyu404.allthemafuyu.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "allthemafuyu.refmap.json",
+  "mixins": [
+    "RemoveDamageBar"
+  ],
+  "client": [
+    "ItemInHandRendererMixin",
+    "ItemRendererMixin",
+    "ModelManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
