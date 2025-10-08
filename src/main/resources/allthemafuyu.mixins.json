@@ -5,12 +5,14 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "allthemafuyu.refmap.json",
   "mixins": [
+    "EntityMixin",
+    "PowderSnowBlockMixin",
     "RemoveDamageBar"
   ],
   "client": [
     "ItemInHandRendererMixin",
     "ItemRendererMixin",
-    "ModelManagerMixin"
+    "ModelBakeryMixin"
   ],
   "injectors": {
     "defaultRequire": 1

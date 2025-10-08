@@ -12,11 +12,14 @@ public class Config {
     public static class ItemZoom extends ItemZoomConfig {}
     public static class NoDamageBar extends NoDamageBarConfig {}
     public static class VariedModel extends VariedModelConfig {}
+    public static class MerrySnow extends MerrySnowConfig {}
 
     static {
         ItemZoom.init(BUILDER);
         NoDamageBar.init(BUILDER);
         VariedModel.init(BUILDER);
+        MerrySnow.init(BUILDER);
+
         SPEC = BUILDER.build();
     }
 }

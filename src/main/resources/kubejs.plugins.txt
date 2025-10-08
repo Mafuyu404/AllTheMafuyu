@@ -1,1 +1,1 @@
-com.common.keybindjs.kubejs.KeyBindJSPlugin
+com.mafuyu404.allthemafuyu.compat.kubejs.MafuyuJSPlugin

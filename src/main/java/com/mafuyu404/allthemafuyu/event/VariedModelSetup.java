@@ -1,7 +1,6 @@
 package com.mafuyu404.allthemafuyu.event;
 
 import com.mafuyu404.allthemafuyu.Allthemafuyu;
-import com.mafuyu404.allthemafuyu.api.IModelManager;
 import com.mafuyu404.allthemafuyu.config.Config;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -13,14 +12,20 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 @Mod.EventBusSubscriber(modid = Allthemafuyu.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class Setup {
+public class VariedModelSetup {
+    private static final HashSet<ModelResourceLocation> cache = new HashSet<>();
+
+    public static void putRegistryCache(ModelResourceLocation e) {
+        cache.add(e);
+    }
+
     @SubscribeEvent
     public static void onModelRegistry(ModelEvent.RegisterAdditional event) {
-        if (!Config.VariedModel.ENABLE.get()) return;
+        if (!Config.VariedModel.LOAD_IDLE_MODEL.get()) return;
 
-        var baked = ((IModelManager) Minecraft.getInstance().getModelManager()).getBakedRegistry();
         ResourceManager resourceManager = Minecraft.getInstance().getResourceManager();
         String modelDir = "models/item"; // 目标目录
 
@@ -40,7 +45,8 @@ public class Setup {
                 // 构造模型资源位置并注册
                 ResourceLocation modelLocation = new ResourceLocation(namespace, itemId);
                 ModelResourceLocation result = new ModelResourceLocation(modelLocation, "inventory");
-                if (!baked.containsKey(result)) {
+                if (!cache.contains(result)) {
+                    Allthemafuyu.LOGGER.warn("Loaded model: {}", result);
                     event.register(result);
                 }
             }

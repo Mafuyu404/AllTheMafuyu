@@ -4,6 +4,7 @@ import com.mafuyu404.allthemafuyu.Allthemafuyu;
 import com.mafuyu404.allthemafuyu.init.VariedModelEvent;
 import dev.latvian.mods.kubejs.client.ClientInitEventJS;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -34,5 +35,9 @@ public class VariedModelModifyEvent extends ClientInitEventJS {
 
     public void setModelPath(String modelPath) {
         this.modelPath = modelPath;
+    }
+
+    public String getModelPath() {
+        return this.modelPath;
     }
 }
