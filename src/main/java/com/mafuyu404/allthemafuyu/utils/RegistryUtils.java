@@ -4,7 +4,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class Utils {
+public class RegistryUtils {
     public static String getItemRegistryName(Item item) {
         if (item == null) {
             return null;

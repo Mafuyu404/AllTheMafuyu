@@ -13,12 +13,14 @@ public class Config {
     public static class NoDamageBar extends NoDamageBarConfig {}
     public static class VariedModel extends VariedModelConfig {}
     public static class MerrySnow extends MerrySnowConfig {}
+    public static class RaidAnywhere extends RaidAnywhereConfig {}
 
     static {
         ItemZoom.init(BUILDER);
         NoDamageBar.init(BUILDER);
         VariedModel.init(BUILDER);
         MerrySnow.init(BUILDER);
+        RaidAnywhere.init(BUILDER);
 
         SPEC = BUILDER.build();
     }

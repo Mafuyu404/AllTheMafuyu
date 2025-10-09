@@ -7,7 +7,8 @@
   "mixins": [
     "EntityMixin",
     "PowderSnowBlockMixin",
-    "RemoveDamageBar"
+    "RemoveDamageBar",
+    "ServerLevelMixin"
   ],
   "client": [
     "ItemInHandRendererMixin",

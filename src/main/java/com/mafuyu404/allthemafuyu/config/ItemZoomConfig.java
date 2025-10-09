@@ -1,6 +1,6 @@
 package com.mafuyu404.allthemafuyu.config;
 
-import com.mafuyu404.allthemafuyu.utils.Utils;
+import com.mafuyu404.allthemafuyu.utils.RegistryUtils;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.ForgeConfigSpec;
 
@@ -36,7 +36,7 @@ public class ItemZoomConfig {
 
         public static boolean checkItemValid(ItemStack itemStack) {
             if (WHITELIST.get().isEmpty()) return true;
-            String id = Utils.getItemRegistryName(itemStack.getItem());
+            String id = RegistryUtils.getItemRegistryName(itemStack.getItem());
             return WHITELIST.get().contains(id);
         }
     }
