@@ -6,6 +6,7 @@
   "refmap": "allthemafuyu.refmap.json",
   "mixins": [
     "EntityMixin",
+    "ItemStackMixin",
     "PowderSnowBlockMixin",
     "RemoveDamageBar",
     "ServerLevelMixin"

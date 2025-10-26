@@ -7,6 +7,6 @@ public interface MafuyuEvents {
 
     EventGroup GROUP = EventGroup.of("MafuyuEvents");
 
-    EventHandler VARIED_MODEL = GROUP.client("modifyVariedModel", () -> VariedModelModifyEvent.class);
+    EventHandler VARIED_MODEL = GROUP.client("modifyVariedModel", () -> VariedModelModifyEventJS.class);
 
 }

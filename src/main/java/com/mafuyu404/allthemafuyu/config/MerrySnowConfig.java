@@ -7,7 +7,7 @@ public class MerrySnowConfig {
     public static ForgeConfigSpec.ConfigValue<Boolean> MERRY_SNOW_WEATHER;
 
     public static void init(ForgeConfigSpec.Builder BUILDER) {
-        BUILDER.push("MerrySnow");
+        BUILDER.push("MerrySnowConfig");
 
         MERRY_POWDER_SNOW = BUILDER
                 .comment("细雪有台阶碰撞箱且无冷冻伤害。")

@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ModelEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -22,8 +23,15 @@ public class VariedModelSetup {
         cache.add(e);
     }
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onModelRegistry(ModelEvent.RegisterAdditional event) {
+        Config.VariedModel.getPresetModel().forEach(id -> {
+            ResourceLocation modelLocation = new ResourceLocation(id);
+            ModelResourceLocation result = new ModelResourceLocation(modelLocation, "inventory");
+            Allthemafuyu.LOGGER.warn("Loaded model: {}", result);
+            event.register(result);
+        });
+
         if (!Config.VariedModel.LOAD_IDLE_MODEL.get()) return;
 
         ResourceManager resourceManager = Minecraft.getInstance().getResourceManager();

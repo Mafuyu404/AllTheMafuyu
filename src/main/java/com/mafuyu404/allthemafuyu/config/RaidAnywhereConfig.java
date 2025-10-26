@@ -6,7 +6,7 @@ public class RaidAnywhereConfig {
     public static ForgeConfigSpec.ConfigValue<Boolean> ENABLE;
 
     public static void init(ForgeConfigSpec.Builder BUILDER) {
-        BUILDER.push("RaidAnywhere");
+        BUILDER.push("RaidAnywhereConfig");
 
         ENABLE = BUILDER
                 .comment("使袭击的发生与村庄、村民或者工作方块再也没有关系。")

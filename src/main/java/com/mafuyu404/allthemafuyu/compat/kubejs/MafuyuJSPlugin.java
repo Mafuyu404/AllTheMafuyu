@@ -16,7 +16,6 @@ public class MafuyuJSPlugin extends KubeJSPlugin {
 
     }
 
-
     @Override
     public void registerTypeWrappers(ScriptType type, TypeWrappers typeWrappers) {
 
